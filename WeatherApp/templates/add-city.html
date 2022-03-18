@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="button-container">
+    <a href="/" class="home-button">Home</a>
+</div>
+<div class="form-container">
+    <form action="/add-city" id="form" method="POST">
+        <legend>Add City</legend>
+        <input type="text" class="input" name="city">
+        <input type="button" name="Confirm" id="submit" value="Confirm" class="btn">
+    </form>
+</div>
+{% endblock %}
