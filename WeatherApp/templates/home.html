@@ -9,7 +9,8 @@
     {% for data in data_list %}
         <div class="weather-item">
             <h1>{{data.name}}</h1>
-            <h2>{{(data.temp)|round|int}} C</h2>
+            <h2>{{(data.temp)|round|int}} 
+                °C</h2>
             <h3>{{data.description}}</h3>
         </div>
     {% endfor %}

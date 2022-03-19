@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    color: green;
+    color: rgb(12, 16, 238);
 }
 
 .title{
@@ -99,7 +99,7 @@ input{
     color: white;
     text-align: center;
     padding: 15px;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 3px black;
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;

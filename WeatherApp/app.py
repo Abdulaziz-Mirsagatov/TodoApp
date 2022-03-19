@@ -22,6 +22,12 @@ class Cities(db.Model):
 @app.route('/')
 def home():
     data_list = Cities.query.all()
+    for city in data_list:
+        r = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={city.name}&units=metric&appid=738133d618da2a2fc537b15f37e93b6a")
+        data = r.json()
+        city.name = data['name']
+        city.temp = data['main']['temp']
+        city.description = data['weather'][0]['description']
     return render_template('home.html', data_list=data_list)
 
 @app.route('/add-city', methods=['GET', 'POST'])
@@ -49,6 +55,12 @@ def remove_city():
         return redirect('/')
     else:
         data_list = Cities.query.all()
+        for city in data_list:
+            r = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={city.name}&units=metric&appid=738133d618da2a2fc537b15f37e93b6a")
+            data = r.json()
+            city.name = data['name']
+            city.temp = data['main']['temp']
+            city.description = data['weather'][0]['description']
         return render_template('remove-city.html', data_list=data_list)
 
 if __name__ == 'main':
