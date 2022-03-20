@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{%block title%}Todo List{% endblock %}
+
+{% block body %}
+<h1 class='centered' style="text-shadow: 0 0 20px;">Todo List</h1>
+<div class="container" id="big-container">
+<div class="flexbox" id="tasks-container">
+
+        <div class="incompleted">
+            <h2 class='centered'>Incompleted Tasks</h2>
+            <ul>
+                {% for task in tasks %}
+                <div class="flexbox">
+                    {% if task.status == False %}
+                    <li class="task">{{task.task_name}}</li>
+                    <a href="toggle/{{task.id}}"><button class="btn small-btn">Mark as Complete</button></a>
+                    <a href="remove/{{task.id}}"><button class="btn small-btn red-btn">Remove</button></a>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="completed">
+            <h2 class='centered'>Completed Tasks</h2>
+            <ul>
+                {% for task in tasks %}
+                <div class="flexbox">
+                    {% if task.status == True %}
+                    <li class="task">{{task.task_name}}</li>
+                    <a href="toggle/{{task.id}}"><button class="btn small-btn">Mark as Incomplete</button></a>
+                    <a href="remove/{{task.id}}"><button class="btn small-btn red-btn">Remove</button></a>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </ul>
+        </div>
+
+</div>
+<a href="add-task"><button class="btn" style="margin-bottom: 5px; font-size: 15px;">Add a New Task</button></a>
+</div>
+<a href="logout" id='logout-a'><button class="btn">Logout</button></a>
+{% endblock %}

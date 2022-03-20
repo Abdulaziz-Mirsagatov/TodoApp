@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Task{% endblock %}
+
+{% block body %}
+    <form action="/" method="POST">
+            <div class="container">
+                <h1>Add Your Task</h1>
+                <input class="input centered" type="text" name="task_name" placeholder="Add your task here..."><br>
+                <input class="centered btn submit" id="task-submit" type="submit" name="submit" value="Add Task"><br>
+                <input class="centered btn submit" id='return-submit' type="submit" name="submit" value="Back to Homepage">
+            </div>
+    </form>
+{% endblock %}

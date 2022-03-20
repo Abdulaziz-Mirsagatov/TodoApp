@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    background-color: rgb(2, 2, 65);
+    color: white;
+    font-weight: bold;
+}
+
+.centered{
+    text-align: center;
+}
+
+.container{
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+}
+
+.submit{
+    margin-top: 10px;
+    width: 300px;
+    font-size: 20px;
+}
+
+.btn:hover{
+    background-color: rgb(55, 197, 12);
+    color: white;
+    transition: .2s;
+    box-shadow: 0 0 10px white;
+}
+
+.flexbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#big-container{
+    background-color: rgb(96, 62, 219);
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 6px white;
+    width: 1000px;
+    min-height: 400px;
+}
+
+.completed, .incompleted{
+    width: 450px;
+    margin: 10px;
+}
+
+.task{
+    font-size: 20px;
+    width: 120px;
+    list-style: none;
+}
+
+.red-btn:hover{
+    background-color: red;
+}
+
+.btn{
+    border-radius: 10px;
+    font-weight: bold;
+    color: rgb(2, 2, 65);
+    padding: 10px;
+}
+
+.small-btn{
+    height: 40px;
+    font-size: 12px;
+}
+
+.input{
+    width: 300px;
+    padding: 10px 0px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+}
+
+.input-field{
+    margin-top: 15px;
+}
+
+label{
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+#login-submit{
+    margin-top: 20px;
+}
+
+#logout-a{
+    position: absolute;
+    right: 1%;
+    top: 3%;
+}
+
+#logout-a button{
+    font-size: large;
+}
