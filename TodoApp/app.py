@@ -6,7 +6,7 @@ app.config['SECRET_KEY'] = 'SECRET_KEY'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
 db = SQLAlchemy(app)
-
+    
 
 class Users(db.Model):
     id = db.Column(db.Integer, primary_key = True)
